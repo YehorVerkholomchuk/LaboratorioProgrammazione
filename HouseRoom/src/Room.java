@@ -19,6 +19,12 @@ public class Room {
     }
 
     public Room(String nome, double superficieMq) {
+        if (nome.isEmpty()) {
+            throw new IllegalArgumentException("Nome invalido");
+        }
+        if (superficieMq <= 0) {
+            throw new IllegalArgumentException("Valore di mq invalido");
+        }
         this.nome = nome;
         this.superficieMq = superficieMq;
     }
