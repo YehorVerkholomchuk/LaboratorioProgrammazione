@@ -8,9 +8,7 @@ public class Main {
             Room r3 = new Room("Sala", 19.43);
 
             House h1 = new House();
-            h1.aggiungiStanza("Cucina", 15.5);
-            h1.visualizzaStanze();
-            h1.visualizzaStanze();
+            h1.aggiungiStanza("Cucina", 0);
         } catch (IllegalArgumentException e) {
             System.out.println("ERRORE: Dato invalido");
         }

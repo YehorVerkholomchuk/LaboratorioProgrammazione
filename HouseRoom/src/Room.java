@@ -23,7 +23,7 @@ public class Room {
             throw new IllegalArgumentException("Nome invalido");
         }
         if (superficieMq <= 0) {
-            throw new IllegalArgumentException("Valore di mq invalido");
+            throw new NumberFormatException("a");
         }
         this.nome = nome;
         this.superficieMq = superficieMq;
