@@ -13,11 +13,17 @@ public class Dictionary {
         vocaboli.put(e.getParolaItaliano(), e);
     }
 
+    public void rimuovi(String parolaItaliano) {
+        vocaboli.remove(parolaItaliano);
+    }
+
     public Entry cerca(String parolaItaliano) {
         return vocaboli.get(parolaItaliano);
     }
 
     public void stampaTutto() {
-        System.out.println(vocaboli);
+        for(Entry v : vocaboli.values()) {
+            System.out.println(v);
+        }
     }
 }

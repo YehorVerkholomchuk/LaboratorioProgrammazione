@@ -5,6 +5,9 @@ public class Entry {
     private String parolaInglese;
 
     public Entry(String parolaItaliano, String parolaInglese) {
+        if (parolaItaliano.isEmpty() || parolaInglese.isEmpty()) {
+            throw new IllegalArgumentException("Parola vuota");
+        }
         this.parolaItaliano = parolaItaliano;
         this.parolaInglese = parolaInglese;
     }
@@ -27,6 +30,6 @@ public class Entry {
 
     @Override
     public String toString() {
-        return "ITA: " + parolaItaliano + " -> ENG: " + parolaInglese + "\n";
+        return "ITA: " + parolaItaliano + " -> ENG: " + parolaInglese;
     }
 }
