@@ -13,9 +13,9 @@ public class Main {
         ItemBiblioteca i3 = new Dvd("def456", "Dvd1", 2020, "c", "Fabio", 100);
 
         b1.aggiungiItem(i1);
+        b1.aggiungiItem(i1);
         b1.aggiungiItem(i2);
         b1.aggiungiItem(i3);
-
         b1.stampaCatalogo();
         System.out.println(b1.getElementiDiAutore("Fabio"));
 
@@ -23,5 +23,9 @@ public class Main {
         b1.aggiungiPrenotazioneFIFO(i2);
         b1.aggiungiPrenotazioneFIFO(i3);
         System.out.println(b1.prossimaPrenotazioneFIFO());
+        b1.aggiungiConsegnaUrgenteLIFO(i1);
+        b1.aggiungiConsegnaUrgenteLIFO(i2);
+        b1.aggiungiConsegnaUrgenteLIFO(i3);
+        System.out.println(b1.prossimaConsegnaLIFO());
     }
 }

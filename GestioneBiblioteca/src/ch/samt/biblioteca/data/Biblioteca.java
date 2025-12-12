@@ -14,7 +14,7 @@ public class Biblioteca {
         catalogo = new ArrayList<>();
         codiciUsati = new HashSet<>();
         elementiPerAutore = new HashMap<>();
-        prenotazioniFIFO = new PriorityQueue<>();
+        prenotazioniFIFO = new LinkedList<>();
         consegneUrgentiLIFO = new Stack<>();
     }
 
@@ -61,7 +61,8 @@ public class Biblioteca {
     }
 
     public boolean aggiungiPrenotazioneFIFO(ItemBiblioteca item) {
-        return prenotazioniFIFO.add(item);
+        prenotazioniFIFO.add(item);
+        return true;
     }
 
     public ItemBiblioteca prossimaPrenotazioneFIFO() {
@@ -69,7 +70,8 @@ public class Biblioteca {
     }
 
     public boolean aggiungiConsegnaUrgenteLIFO(ItemBiblioteca item) {
-        return consegneUrgentiLIFO.add(item);
+        consegneUrgentiLIFO.add(item);
+        return true;
     }
 
     public ItemBiblioteca prossimaConsegnaLIFO() {
