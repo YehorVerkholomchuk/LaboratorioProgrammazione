@@ -18,4 +18,13 @@ public class PhysicalBook extends LibraryResource {
     public String getUsageTerms() {
         return  "Physical copy at location: " + shelfLocation;
     }
+
+    @Override
+    public String toString() {
+        return "LibraryResource{" +
+                "title='" + getTitle() + '\'' +
+                ", popularityIndex=" + getPopularityIndex() + '\'' +
+                ", shelfLocation='" + shelfLocation + '\'' +
+                '}';
+    }
 }

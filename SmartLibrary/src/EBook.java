@@ -11,7 +11,7 @@ public class EBook extends LibraryResource implements Downloadable {
 
     @Override
     public String getUsageTerms() {
-        return  "Digital license: single user access.";
+        return "Digital license: single user access.";
     }
 
     @Override
@@ -20,5 +20,13 @@ public class EBook extends LibraryResource implements Downloadable {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public String toString() {
+        return "LibraryResource{" +
+                "title='" + getTitle() + '\'' +
+                ", popularityIndex=" + getPopularityIndex() +
+                '}';
     }
 }

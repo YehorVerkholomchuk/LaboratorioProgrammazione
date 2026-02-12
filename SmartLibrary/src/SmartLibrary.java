@@ -23,13 +23,11 @@ public class SmartLibrary {
         return this.resLista.size();
     }
 
-    public ArrayList<LibraryResource> getDownloadableResources() {
-        ArrayList<LibraryResource> dResources = new ArrayList<>();
+    public void getDownloadableResources() {
         for (LibraryResource res: this.resLista) {
             if (res instanceof Downloadable) {
-                dResources.add(res);
+                System.out.println(res);
             }
         }
-        return dResources;
     }
 }
